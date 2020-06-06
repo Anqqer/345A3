@@ -73,8 +73,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       <input class="w3-input w3-border w3-margin-bottom" type="text">
       <input class="w3-input w3-border w3-margin-bottom" style="height:150px" placeholder="Message">
       <div class="w3-section">
-        <a class="w3-button w3-red" onclick="document.getElementById('id01').style.display='none'">Cancel  <i class="fa fa-remove"></i></a>
-        <a class="w3-button w3-light-grey w3-right" onclick="document.getElementById('id01').style.display='none'">Share  <i class="fa fa-paper-plane"></i></a> 
+        <a class="w3-button w3-red" onclick="document.getElementById('id01').style.display='none'">Cancel  <i class="fa fa-remove"></i></a>
+        <a class="w3-button w3-light-grey w3-right" onclick="document.getElementById('id01').style.display='none'">Share  <i class="fa fa-paper-plane"></i></a> 
       </div>    
     </div>
   </div>
@@ -97,8 +97,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       <input class="w3-input w3-border w3-margin-bottom" type="text">
       <input class="w3-input w3-border w3-margin-bottom" style="height:150px" placeholder="Message">
       <div class="w3-section">
-        <a class="w3-button w3-red" onclick="document.getElementById('id02').style.display='none'">Cancel  <i class="fa fa-remove"></i></a>
-        <a class="w3-button w3-light-grey w3-right" onclick="document.getElementById('id02').style.display='none'">Share  <i class="fa fa-paper-plane"></i></a> 
+        <a class="w3-button w3-red" onclick="document.getElementById('id02').style.display='none'">Cancel  <i class="fa fa-remove"></i></a>
+        <a class="w3-button w3-light-grey w3-right" onclick="document.getElementById('id02').style.display='none'">Share  <i class="fa fa-paper-plane"></i></a> 
       </div>    
     </div>
   </div>
@@ -110,7 +110,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
     <div class="w3-container w3-padding w3-red">
        <span onclick="document.getElementById('id03').style.display='none'"
        class="w3-button w3-red w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
-      <h2>Edit History</h2>
+      <h2 style="text-align:center">Edit History</h2>
     </div>
     <div class="w3-panel">
       <label>To</label>
@@ -121,8 +121,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       <input class="w3-input w3-border w3-margin-bottom" type="text">
       <input class="w3-input w3-border w3-margin-bottom" style="height:150px" placeholder="Message">
       <div class="w3-section">
-        <a class="w3-button w3-red" onclick="document.getElementById('id03').style.display='none'">Cancel  <i class="fa fa-remove"></i></a>
-        <a class="w3-button w3-light-grey w3-right" onclick="document.getElementById('id03').style.display='none'">Share  <i class="fa fa-paper-plane"></i></a> 
+        <a class="w3-button w3-red" onclick="document.getElementById('id03').style.display='none'">Cancel  <i class="fa fa-remove"></i></a>
+        <a class="w3-button w3-light-grey w3-right" onclick="document.getElementById('id03').style.display='none'">Share  <i class="fa fa-paper-plane"></i></a> 
       </div>    
     </div>
   </div>
@@ -143,32 +143,32 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   <img class="w3-round  w3-animate-top" src="./fileIcon3.png" style="width:20%;">
   <h5 class="w3-opacity">File 1</h5>
   <h4><i class="fa fa-clock-o"></i> File 1, Sep 27, 2015.</h4>
-  <a class="w3-button w3-light-grey" onclick="document.getElementById('id01').style.display='block'">Share<i class="w3-margin-left fa fa-mail-reply"></i></a>
-  <a class="w3-button w3-light-grey" href="#">Delete<i class="w3-margin-left fa fa-arrow-right"></i></a>
+  <a class="w3-button w3-light-grey" onclick="document.getElementById('id02').style.display='block'">Shared with<i class="w3-margin-left fa fa-mail-reply"></i></a>
+  <a class="w3-button w3-light-grey" href="#" onclick="document.getElementById('id03').style.display='block'">Edit History<i class="w3-margin-left fa fa-arrow-right"></i></a>
   <hr>
   
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
  
 </div>
-<!-- File with working share button -->
+
 <div id="File2" class="w3-container file">
   <br>
   <img class="w3-round w3-animate-top" src="./fileIcon5.png" style="width:20%;">
   <h5 class="w3-opacity">File 2</h5>
   <h4><i class="fa fa-clock-o"></i> File 2, Sep 25, 2015.</h4>
   <a class="w3-button w3-light-grey" onclick="document.getElementById('id02').style.display='block'">Shared with<i class="w3-margin-left fa fa-mail-reply"></i></a>
-  <a class="w3-button w3-light-grey">Edit History<i class="w3-margin-left fa fa-arrow-right"></i></a>
+  <a class="w3-button w3-light-grey" onclick="document.getElementById('id03').style.display='block'">Edit History<i class="w3-margin-left fa fa-arrow-right"></i></a>
   <hr>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
 </div>
-<!-- File with working edit history button -->
+
 <div id="File3" class="w3-container file">
   <br>
   <img class="w3-round w3-animate-top" src="./fileIcon2.png" style="width:20%;">
   <h5 class="w3-opacity">File 3</h5>
   <h4><i class="fa fa-clock-o"></i> File 3, Sep 23, 2015.</h4>
-  <a class="w3-button w3-light-grey">Shared with<i class="w3-margin-left fa fa-mail-reply"></i></a>
+  <a class="w3-button w3-light-grey" onclick="document.getElementById('id02').style.display='block'">Shared with<i class="w3-margin-left fa fa-mail-reply"></i></a>
   <a class="w3-button w3-light-grey" onclick="document.getElementById('id03').style.display='block'">Edit history<i class="w3-margin-left fa fa-arrow-right"></i></a>
   <hr>
  
@@ -225,4 +225,3 @@ openTab.click();
 
 </body>
 </html> 
-
