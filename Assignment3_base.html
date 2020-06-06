@@ -54,7 +54,18 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       <h2>Share File</h2>
     </div>
     <div class="w3-panel">
-      <label>To</label>
+      <label>Send to</label>
+      <select name="groups" id="groups">
+        <option value="COMPSCI 101">COMPSCI 101</option>
+        <option value="COMPSCI 111">COMPSCI 111</option>
+        <option value="COMPSCI 105">COMPSCI 105</option>
+        <option value="COMPSCI 108">COMPSCI 108</option>
+      </select>
+      <style>
+      #groups {
+        width:150px; 
+      }
+      </style>
       <input class="w3-input w3-border w3-margin-bottom" type="text">
       <label>From</label>
       <input class="w3-input w3-border w3-margin-bottom" type="text">
@@ -75,7 +86,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
     <div class="w3-container w3-padding w3-red">
        <span onclick="document.getElementById('id02').style.display='none'"
        class="w3-button w3-red w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
-      <h2>Share File</h2>
+       <h2 style="text-align:center">Shared with</h2>
     </div>
     <div class="w3-panel">
       <label>To</label>
@@ -99,7 +110,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
     <div class="w3-container w3-padding w3-red">
        <span onclick="document.getElementById('id03').style.display='none'"
        class="w3-button w3-red w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
-      <h2>Share File</h2>
+      <h2>Edit History</h2>
     </div>
     <div class="w3-panel">
       <label>To</label>
@@ -146,7 +157,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   <h5 class="w3-opacity">File 2</h5>
   <h4><i class="fa fa-clock-o"></i> File 2, Sep 25, 2015.</h4>
   <a class="w3-button w3-light-grey" onclick="document.getElementById('id02').style.display='block'">Shared with<i class="w3-margin-left fa fa-mail-reply"></i></a>
-  <a class="w3-button w3-light-grey">Editting History<i class="w3-margin-left fa fa-arrow-right"></i></a>
+  <a class="w3-button w3-light-grey">Edit History<i class="w3-margin-left fa fa-arrow-right"></i></a>
   <hr>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
@@ -158,7 +169,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   <h5 class="w3-opacity">File 3</h5>
   <h4><i class="fa fa-clock-o"></i> File 3, Sep 23, 2015.</h4>
   <a class="w3-button w3-light-grey">Shared with<i class="w3-margin-left fa fa-mail-reply"></i></a>
-  <a class="w3-button w3-light-grey">Editting history<i class="w3-margin-left fa fa-arrow-right"></i></a>
+  <a class="w3-button w3-light-grey" onclick="document.getElementById('id03').style.display='block'">Edit history<i class="w3-margin-left fa fa-arrow-right"></i></a>
   <hr>
  
 </div>
