@@ -57,34 +57,34 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 <!-- Side Navigation -->
 <nav class="w3-sidebar w3-bar-block w3-collapse w3-white w3-animate-left w3-card" style="z-index:3;width:320px;" id="mySidebar">
   <img class="w3-round  w3-animate-top logo" src="./test4.png"  onclick="doShare('File1');w3_close();">
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom w3-large" onclick="doShare('File1');w3_close();"><i class="fa fa-edit"></i> Workspace<br/> 
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom w3-large w3-hover-blue" onclick="doShare('File1');w3_close();"><i class="fa fa-cloud"></i> Workspace<br/> 
   <!-- Can add an image or logo here for the top left, just change the src and add the img file to same folder
   <span><img class="w3-round  w3-animate-top" src="./desk.jpg" style="width:50%;"></span></a>    -->
   <a href="javascript:void(0)" onclick="w3_close()" title="Close Sidemenu" 
   class="w3-bar-item w3-button w3-hide-large w3-large">Close <i class="fa fa-remove"></i></a>
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-dark-grey w3-button w3-hover-blue w3-left-align" onclick="document.getElementById('id01').style.display='block'">Share File <i class="w3-padding fa fa-pencil"></i></a>
-  <a id="myBtn" onclick="myFunc('Demo1')" href="javascript:void(0)" class="w3-bar-item w3-button"><i class="fa fa-inbox w3-margin-right"></i>Files (3)<i class="fa fa-caret-down w3-margin-left"></i></a>
+  <a id="myBtn" onclick="myFunc('Demo1')" href="javascript:void(0)" class="w3-bar-item w3-button w3-hover-blue"><i class="fa fa-inbox w3-margin-right"></i>Files (3)<i class="fa fa-caret-down w3-margin-left"></i></a>
   <div id="Demo1" class="w3-hide w3-animate-left">
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-blue" onclick="doShare('File1');w3_close();" id="firstTab">
       <div class="w3-container">
-        <img class="w3-round w3-margin-right" src="./doc_icon.png" style="width:15%;"><span class="w3-opacity w3-large">File 1</span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        <img class="w3-round w3-margin-right" src="./doc_icon.png" style="width:15%;"><span class="w3-large">File 1</span>
+        <p><i><i>Description</i></i></p>
       </div>
     </a>
      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-blue" onclick="doShare('File2');w3_close();">
       <div class="w3-container">
-        <img class="w3-round w3-margin-right" src="./doc_icon.png" style="width:15%;"><span class="w3-opacity w3-large">File 2</span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        <img class="w3-round w3-margin-right" src="./doc_icon.png" style="width:15%;"><span class="w3-large">File 2</span>
+        <p><i><i>Description</i></i></p>
       </div>
     </a>
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-blue" onclick="doShare('File3');w3_close();">
       <div class="w3-container">
-        <img class="w3-round w3-margin-right" src="./pdf_icon.png" style="width:15%;"><span class="w3-opacity w3-large">File 3</span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        <img class="w3-round w3-margin-right" src="./pdf_icon.png" style="width:15%;"><span class="w3-large">File 3</span>
+        <p><i><i>Description</i></i></p>
       </div>
     </a>
   </div>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-paper-plane w3-margin-right"></i>Shared Files</a>
+  <a href="#" class="w3-bar-item w3-button w3-hover-blue"><i class="fa fa-paper-plane w3-margin-right"></i>Shared Files</a>
 
 
   <a id="myBtn2" onclick="myFunc('Demo2')" href="#" class="w3-bar-item w3-button w3-hover-blue"><i class="fa fa-star w3-margin-right menu-star"></i>Important Files (1)<i class="fa fa-caret-down w3-margin-left"></i></a>
@@ -93,12 +93,12 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-blue" onclick="doShare('File2');w3_close();">
       <div class="w3-container">
         <img class="w3-round w3-margin-right" src="./doc_icon.png" style="width:15%;"><span class="w3-opacity w3-large">File 2</span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        <p><i><i>Description</i></i></p>
       </div>
     </a>
   </div>
-  <a href="#" class="w3-bar-item w3-round w3-button"><i class="fa fa-trash w3-margin-right"></i>Trash</a>
-  <a href="#" class="w3-bar-item w3-round w3-button"><i class="fa fa-hourglass-end w3-margin-right"></i>Draft Files</a>
+  <a href="#" class="w3-bar-item w3-round w3-button w3-hover-blue"><i class="fa fa-trash w3-margin-right"></i>Trash</a>
+  <a href="#" class="w3-bar-item w3-round w3-button w3-hover-blue"><i class="fa fa-hourglass-end w3-margin-right"></i>Draft Files</a>
   
 </nav>
 
@@ -122,7 +122,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       
       <input class="w3-input w3-border w3-margin-bottom w3-margin-top" style="height:100px" placeholder="Message">
       <div class="w3-section">
-        <a class="w3-button w3-blue w3-round w3-hover-red" onclick="document.getElementById('id01').style.display='none', document.getElementById('id05').style.display='block'">Cancel  <i class="fa fa-remove"></i></a>
+        <a class="w3-button w3-red w3-round" onclick="document.getElementById('id01').style.display='none', document.getElementById('id05').style.display='block'">Cancel  <i class="fa fa-remove"></i></a>
 		<a class="w3-button w3-green w3-right w3-round" onclick="document.getElementById('id01').style.display='none', document.getElementById('id04').style.display='block'">Share  <i class="fa fa-paper-plane"></i></a> 
       </div>    
     </div>
@@ -296,13 +296,13 @@ onclick="document.getElementById('id02').style.display='block'". You see it says
   <img class="w3-round  w3-animate-top" src="./png_icon.png" style="width:5%;">
   <img class="w3-round  w3-animate-top" src="./png_icon.png" style="width:5%;">
   <img class="w3-round  w3-animate-top" src="./jpg_icon.png" style="width:5%;">
-  <h4><i class="fa fa-clock-o"></i> File 1, Sep 27, 2015. <i onclick="myFav(this)" class="w3-margin-left fa fa-star-o" style="font-size:36px"></i></h4>
-  <a class="w3-button w3-round w3-light-grey" onclick="document.getElementById('id02').style.display='block'">Shared With<i class="w3-margin-left fa fa-mail-reply"></i></a>
-  <a class="w3-button w3-round w3-light-grey" href="#" onclick="document.getElementById('id03').style.display='block'">Edit History<i class="w3-margin-left fa fa-pencil"></i></a>
+  <h4><i class="fa fa-clock-o"></i> File 1, Jun 1, 2020 <i onclick="myFav(this)" class="w3-margin-left fa fa-star-o" style="font-size:36px"></i></h4>
+  <a class="w3-button w3-round w3-light-grey w3-hover-blue" onclick="document.getElementById('id06').style.display='block'">Shared With<i class="w3-margin-left fa fa-mail-reply"></i></a>
+  <a class="w3-button w3-round w3-light-grey w3-hover-blue" onclick="document.getElementById('id07').style.display='block'">Edit History<i class="w3-margin-left fa fa-pencil"></i></a>
   
   <hr>
   
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p><i>Description</i></p>
  
 </div>
 
@@ -317,12 +317,12 @@ onclick="document.getElementById('id02').style.display='block'". You see it says
   <img class="w3-round  w3-animate-top" src="./jpg_icon.png" style="width:5%;">
   <img class="w3-round  w3-animate-top" src="./png_icon.png" style="width:5%;">
 
-  <h4><i class="fa fa-clock-o"></i> File 2, Sep 25, 2015.  <i id="fav-file" class="w3-margin-left fa fa-star" style="font-size:36px"></i> </h4>
-  <a class="w3-button w3-round w3-light-grey" onclick="document.getElementById('id02').style.display='block'">Shared With<i class="w3-margin-left fa fa-mail-reply"></i></a>
-  <a class="w3-button w3-round w3-light-grey" onclick="document.getElementById('id03').style.display='block'">Edit History<i class="w3-margin-left fa fa-pencil"></i></a>
+  <h4><i class="fa fa-clock-o"></i> File 2, May 31, 2020  <i id="fav-file" class="w3-margin-left fa fa-star" style="font-size:36px"></i> </h4>
+  <a class="w3-button w3-round w3-light-grey w3-hover-blue" onclick="document.getElementById('id06').style.display='block'">Shared With<i class="w3-margin-left fa fa-mail-reply"></i></a>
+  <a class="w3-button w3-round w3-light-grey w3-hover-blue" onclick="document.getElementById('id07').style.display='block'">Edit History<i class="w3-margin-left fa fa-pencil"></i></a>
   
   <hr>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p><i>Description</i></p>
 
 </div>
 
@@ -336,10 +336,10 @@ onclick="document.getElementById('id02').style.display='block'". You see it says
   <img class="w3-round  w3-animate-top" src="./jpg_icon.png" style="width:5%;">
   <img class="w3-round  w3-animate-top" src="./png_icon.png" style="width:5%;">
   <img class="w3-round  w3-animate-top" src="./png_icon.png" style="width:5%;">
-  <h4><i class="fa fa-clock-o"></i> File 3, Sep 23, 2015. <i onclick="myFav(this)" class="w3-margin-left fa fa-star-o" style="font-size:36px"></i>
+  <h4><i class="fa fa-clock-o"></i> File 3, May 25, 2020 <i onclick="myFav(this)" class="w3-margin-left fa fa-star-o" style="font-size:36px"></i>
     </h4>
-  <a class="w3-button w3-round w3-light-grey" onclick="document.getElementById('id06').style.display='block'">Shared With<i class="w3-margin-left fa fa-mail-reply"></i></a>
-  <a class="w3-button w3-round w3-light-grey" onclick="document.getElementById('id07').style.display='block'">Edit History<i class="w3-margin-left fa fa-pencil"></i></a>
+  <a class="w3-button w3-round w3-light-grey w3-hover-blue" onclick="document.getElementById('id06').style.display='block'">Shared With<i class="w3-margin-left fa fa-mail-reply"></i></a>
+  <a class="w3-button w3-round w3-light-grey w3-hover-blue" onclick="document.getElementById('id07').style.display='block'">Edit History<i class="w3-margin-left fa fa-pencil"></i></a>
   <hr>
  
 </div>
