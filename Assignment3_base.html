@@ -102,7 +102,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
     <div class="w3-container w3-padding w3-red">
        <span onclick="document.getElementById('id01').style.display='none'"
        class="w3-button w3-red w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
-      <h2>Share File</h2>
+      <h2 style = 'text-align:center'>Share File</h2>
     </div>
     <div class="w3-panel">
       <label>Send to</label>
@@ -212,10 +212,48 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
     <div class="w3-container w3-padding w3-red">
 	   <span onclick="document.getElementById('id04').style.display='none'"
        class="w3-button w3-red w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
-		<h2 style=text-align:left> File shared successfully! </h2>
+		<h2 style=text-align:center> File shared successfully! </h2>
 	</div>
   </div>
  </div>
+
+<!-- Unshared file modals - hardcoded for usage testing -->
+<div id="id05" class="w3-modal" style="z-index:5">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-padding w3-red">
+	   <span onclick="document.getElementById('id05').style.display='none'"
+       class="w3-button w3-red w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
+		<h2 style=text-align:center> File not yet shared </h2>
+	</div>
+  </div>
+ </div>
+<div id="id06" class="w3-modal" style="z-index:4">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-padding w3-red">
+       <span onclick="document.getElementById('id06').style.display='none'"
+       class="w3-button w3-red w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
+      <h2 style="text-align:center">Edit History</h2>
+    </div>
+    <table style="width:100%">
+		<tr>
+			<th align="left">Edited by</th>
+			<th align="left">Date</th> 
+			<th align="left">Version</th>
+		</tr>
+		<tr>
+			<td>Me</td>
+			<td>10 min ago</td>
+			<td>v1.01</td>
+		</tr>
+		<tr>
+			<td>Me</td>
+			<td>6/4/2020</td>
+			<td>v1.0</td>
+		</tr>
+	</table>   
+    </div>
+  </div>
+</div>
 
 <!-- Cancel modal -->
 <div id="id05" class="w3-modal" style="z-index:5">
@@ -276,8 +314,8 @@ onclick="document.getElementById('id02').style.display='block'". You see it says
   <h5 class="w3-opacity">File 3</h5>
   <h4><i class="fa fa-clock-o"></i> File 3, Sep 23, 2015. <i onclick="myFav(this)" class="w3-margin-left fa fa-star-o" style="font-size:36px"></i>
     </h4>
-  <a class="w3-button w3-light-grey" onclick="document.getElementById('id02').style.display='block'">Shared With<i class="w3-margin-left fa fa-mail-reply"></i></a>
-  <a class="w3-button w3-light-grey" onclick="document.getElementById('id03').style.display='block'">Edit History<i class="w3-margin-left fa fa-arrow-right"></i></a>
+  <a class="w3-button w3-light-grey" onclick="document.getElementById('id05').style.display='block'">Shared With<i class="w3-margin-left fa fa-mail-reply"></i></a>
+  <a class="w3-button w3-light-grey" onclick="document.getElementById('id06').style.display='block'">Edit History<i class="w3-margin-left fa fa-arrow-right"></i></a>
   <hr>
  
 </div>
