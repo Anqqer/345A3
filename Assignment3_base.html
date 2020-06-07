@@ -8,13 +8,47 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><style>
 html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 .w3-bar-block .w3-bar-item {padding: 16px}
+
+#fav-file{
+  color:orange;
+}
+
+.fa-star-o {
+  color:orange;
+  transition: opacity 1s;
+  opacity:0.6;
+}
+
+.fa-star-o:hover {
+  color:orange;
+  opacity:3;
+}
+
+.fa-star{
+  transition: color 1s;
+}
+
+.fa-star:hover{
+  color:orange
+}
+
+.menu-star{
+  transition: 20s;  
+  color: black;
+}
+.menu-star{
+  color:black
+}
+
+
 </style>
 <body>
 
 <!-- Side Navigation -->
 <nav class="w3-sidebar w3-bar-block w3-collapse w3-white w3-animate-left w3-card" style="z-index:3;width:320px;" id="mySidebar">
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom w3-large"><i class="fa fa-edit"></i> Workspace<br/> 
-  <span><img class="w3-round  w3-animate-top" src="./desk.jpg" style="width:50%;"></span></a>
+  <!-- Can add an image or logo here for the top left, just change the src and add the img file to same folder
+  <span><img class="w3-round  w3-animate-top" src="./desk.jpg" style="width:50%;"></span></a>    -->
   <a href="javascript:void(0)" onclick="w3_close()" title="Close Sidemenu" 
   class="w3-bar-item w3-button w3-hide-large w3-large">Close <i class="fa fa-remove"></i></a>
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-dark-grey w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id01').style.display='block'">Share File <i class="w3-padding fa fa-pencil"></i></a>
@@ -41,9 +75,23 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
     </a>
   </div>
   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-paper-plane w3-margin-right"></i>Shared Files</a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-star-o w3-margin-right"></i>Important Files</a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-hourglass-end w3-margin-right"></i>Draft Files</a>
+
+
+  <a id="myBtn2" onclick="myFunc('Demo2')" href="#" class="w3-bar-item w3-button"><i class="fa fa-star w3-margin-right menu-star"></i>Important Files (1)<i class="fa fa-caret-down w3-margin-left"></i></a>
+  <div id="Demo2" class="w3-hide w3-animate-left">
+    </a>
+     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="doShare('File2');w3_close();">
+      <div class="w3-container">
+        <img class="w3-round w3-margin-right" src="./fileIcon5.png" style="width:15%;"><span class="w3-opacity w3-large">File 2</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+      </div>
+    </a>
+  </div>
   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-trash w3-margin-right"></i>Trash</a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-hourglass-end w3-margin-right"></i>Draft Files</a>
+
+
+  
 </nav>
 
 <!-- Modal that pops up when you click on "Share File" -->
@@ -182,7 +230,7 @@ onclick="document.getElementById('id02').style.display='block'". You see it says
   <br>
   <img class="w3-round  w3-animate-top" src="./fileIcon3.png" style="width:20%;">
   <h5 class="w3-opacity">File 1</h5>
-  <h4><i class="fa fa-clock-o"></i> File 1, Sep 27, 2015. <i class="w3-margin-left fa fa-star-o" style="font-size:36px"></i></h4>
+  <h4><i class="fa fa-clock-o"></i> File 1, Sep 27, 2015. <i onclick="myFav(this)" class="w3-margin-left fa fa-star-o" style="font-size:36px"></i></h4>
   <a class="w3-button w3-light-grey" onclick="document.getElementById('id02').style.display='block'">Shared With<i class="w3-margin-left fa fa-mail-reply"></i></a>
   <a class="w3-button w3-light-grey" href="#" onclick="document.getElementById('id03').style.display='block'">Edit History<i class="w3-margin-left fa fa-arrow-right"></i></a>
   
@@ -197,7 +245,7 @@ onclick="document.getElementById('id02').style.display='block'". You see it says
   <img class="w3-round w3-animate-top" src="./fileIcon5.png" style="width:20%;">
   <h5 class="w3-opacity">File 2</h5>
 
-  <h4><i class="fa fa-clock-o"></i> File 2, Sep 25, 2015.  <i class="w3-margin-left fa fa-star-o" style="font-size:36px"></i> </h4>
+  <h4><i class="fa fa-clock-o"></i> File 2, Sep 25, 2015.  <i id="fav-file" class="w3-margin-left fa fa-star" style="font-size:36px"></i> </h4>
   <a class="w3-button w3-light-grey" onclick="document.getElementById('id02').style.display='block'">Shared With<i class="w3-margin-left fa fa-mail-reply"></i></a>
   <a class="w3-button w3-light-grey" onclick="document.getElementById('id03').style.display='block'">Edit History<i class="w3-margin-left fa fa-arrow-right"></i></a>
   
@@ -210,7 +258,8 @@ onclick="document.getElementById('id02').style.display='block'". You see it says
   <br>
   <img class="w3-round w3-animate-top" src="./fileIcon2.png" style="width:20%;">
   <h5 class="w3-opacity">File 3</h5>
-  <h4><i class="fa fa-clock-o"></i> File 3, Sep 23, 2015. <i class="w3-margin-left fa fa-star-o" style="font-size:36px"></i></h4>
+  <h4><i class="fa fa-clock-o"></i> File 3, Sep 23, 2015. <i onclick="myFav(this)" class="w3-margin-left fa fa-star-o" style="font-size:36px"></i>
+    </h4>
   <a class="w3-button w3-light-grey" onclick="document.getElementById('id02').style.display='block'">Shared With<i class="w3-margin-left fa fa-mail-reply"></i></a>
   <a class="w3-button w3-light-grey" onclick="document.getElementById('id03').style.display='block'">Edit History<i class="w3-margin-left fa fa-arrow-right"></i></a>
   <hr>
@@ -269,9 +318,26 @@ openTab.click();
 <!--Favourite function UNFINISHED-->
 <script>
   function myFav(x) {
-    x.classList.toggle("fa fa-star checked");
+    x.classList.toggle('fa-star');
+    x.classList.toggle('fa-star-o');
+    x.style.color = "orange";
+     
   }
 </script>
+
+
+
+<!--Pop-up function-->
+<script>
+  
+  // When the user clicks on <div>, open the popup
+  function myPopup() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+  }
+  </script>
+
+  
 
 <!--CDN for jQuery-->
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
