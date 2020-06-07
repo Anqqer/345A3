@@ -118,12 +118,12 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Your Email">
       <label>File</label>
       <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Browse...">
-      <label>Tags: &nbsp <a onclick = "this.innerHTML = '&#10004; Draft'" class="w3-button tags w3-blue" >Draft</a>&nbsp&nbsp<a onclick = "this.innerHTML = '&#10004; Master'" class="w3-button tags w3-blue" >Master</a>&nbsp&nbsp<a onclick = "this.innerHTML = '&#10004; Notes'" class="w3-button tags w3-blue" >Notes</a>&nbsp&nbsp<a class="w3-button tags w3-blue" >Custom</a>&nbsp&nbsp</label>
+      <label>Tags: &nbsp <a id = 'tag0' onclick = "this.innerHTML = '&#10004; Draft'" class="w3-button tags w3-blue" >Draft</a>&nbsp&nbsp<a id = 'tag1' onclick = "this.innerHTML = '&#10004; Master'" class="w3-button tags w3-blue" >Master</a>&nbsp&nbsp<a id = 'tag2' onclick = "this.innerHTML = '&#10004; Notes'" class="w3-button tags w3-blue" >Notes</a>&nbsp&nbsp<a class="w3-button tags w3-blue" >Custom</a>&nbsp&nbsp</label>
       
       <input class="w3-input w3-border w3-margin-bottom w3-margin-top" style="height:100px" placeholder="Message">
       <div class="w3-section">
         <a class="w3-button w3-red w3-round" onclick="document.getElementById('id01').style.display='none', document.getElementById('id05').style.display='block'">Cancel  <i class="fa fa-remove"></i></a>
-		<a class="w3-button w3-green w3-right w3-round" onclick="document.getElementById('id01').style.display='none', document.getElementById('id04').style.display='block'">Share  <i class="fa fa-paper-plane"></i></a> 
+		<a class="w3-button w3-green w3-right w3-round" onclick="document.getElementById('id01').style.display='none', document.getElementById('id04').style.display='block', removeTags()">Share  <i class="fa fa-paper-plane"></i></a> 
       </div>    
     </div>
   </div>
@@ -268,7 +268,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 	   <span onclick="document.getElementById('id05').style.display='none'"
        class="w3-button w3-round w3-blue w3-right w3-xxlarge w3-hover-red"><i class="fa fa-remove"></i></span>
 		<h2 style=text-align:left> Are you sure you want to cancel? </h2>
-		<a class="w3-round w3-button w3-white w3-hover-green" onclick="document.getElementById('id01').style.display='none', document.getElementById('id05').style.display='none'">Yes</a>
+		<a class="w3-round w3-button w3-white w3-hover-green" onclick="document.getElementById('id01').style.display='none', document.getElementById('id05').style.display='none', removeTags()">Yes</a>
 		<a href="javascript:void(0)" class="w3-bar-item w3-button w3-round w3-white w3-button w3-hover-red w3-left-align" onclick="document.getElementById('id05').style.display='none', document.getElementById('id01').style.display='block'">No</a>
 	</div>
   </div>
@@ -425,6 +425,14 @@ function sentClose(){
 </script>
 
 
+<!-- Function for removing tags on close share window -->
+<script>
+function removeTags(){
+	document.getElementById('tag0').innerHTML = 'Draft'
+	document.getElementById('tag1').innerHTML = 'Master'
+	document.getElementById('tag2').innerHTML = 'Notes'
+}
+</script>
 
 
   
