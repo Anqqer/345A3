@@ -43,35 +43,43 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   width: 100px;
   height:25px;
 }
+
+.logo {
+  display: block;
+  vertical-align:middle
+  margin-left: auto;
+  margin-right: auto;
+  width:100%;
+}
 </style>
 <body>
 
 <!-- Side Navigation -->
 <nav class="w3-sidebar w3-bar-block w3-collapse w3-white w3-animate-left w3-card" style="z-index:3;width:320px;" id="mySidebar">
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom w3-large"><i class="fa fa-edit"></i> Workspace<br/> 
+  <img class="w3-round  w3-animate-top logo" src="./test4.png"  onclick="doShare('File1');w3_close();">
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom w3-large" onclick="doShare('File1');w3_close();"><i class="fa fa-edit"></i> Workspace<br/> 
   <!-- Can add an image or logo here for the top left, just change the src and add the img file to same folder
   <span><img class="w3-round  w3-animate-top" src="./desk.jpg" style="width:50%;"></span></a>    -->
   <a href="javascript:void(0)" onclick="w3_close()" title="Close Sidemenu" 
   class="w3-bar-item w3-button w3-hide-large w3-large">Close <i class="fa fa-remove"></i></a>
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-dark-grey w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id01').style.display='block'">Share File <i class="w3-padding fa fa-pencil"></i></a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-dark-grey w3-button w3-hover-blue w3-left-align" onclick="document.getElementById('id01').style.display='block'">Share File <i class="w3-padding fa fa-pencil"></i></a>
   <a id="myBtn" onclick="myFunc('Demo1')" href="javascript:void(0)" class="w3-bar-item w3-button"><i class="fa fa-inbox w3-margin-right"></i>Files (3)<i class="fa fa-caret-down w3-margin-left"></i></a>
   <div id="Demo1" class="w3-hide w3-animate-left">
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="doShare('File1');w3_close();" id="firstTab">
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-blue" onclick="doShare('File1');w3_close();" id="firstTab">
       <div class="w3-container">
-        <img class="w3-round w3-margin-right" src="./fileIcon3.png" style="width:15%;"><span class="w3-opacity w3-large">File 1</span>
-        <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</h6>
+        <img class="w3-round w3-margin-right" src="./doc_icon.png" style="width:15%;"><span class="w3-opacity w3-large">File 1</span>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
       </div>
     </a>
-     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="doShare('File2');w3_close();">
+     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-blue" onclick="doShare('File2');w3_close();">
       <div class="w3-container">
-        <img class="w3-round w3-margin-right" src="./fileIcon5.png" style="width:15%;"><span class="w3-opacity w3-large">File 2</span>
+        <img class="w3-round w3-margin-right" src="./doc_icon.png" style="width:15%;"><span class="w3-opacity w3-large">File 2</span>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
       </div>
     </a>
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="doShare('File3');w3_close();">
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-blue" onclick="doShare('File3');w3_close();">
       <div class="w3-container">
-        <img class="w3-round w3-margin-right" src="./fileIcon2.png" style="width:15%;"><span class="w3-opacity w3-large">File 3</span>
+        <img class="w3-round w3-margin-right" src="./pdf_icon.png" style="width:15%;"><span class="w3-opacity w3-large">File 3</span>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
       </div>
     </a>
@@ -79,29 +87,27 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-paper-plane w3-margin-right"></i>Shared Files</a>
 
 
-  <a id="myBtn2" onclick="myFunc('Demo2')" href="#" class="w3-bar-item w3-button"><i class="fa fa-star w3-margin-right menu-star"></i>Important Files (1)<i class="fa fa-caret-down w3-margin-left"></i></a>
+  <a id="myBtn2" onclick="myFunc('Demo2')" href="#" class="w3-bar-item w3-button w3-hover-blue"><i class="fa fa-star w3-margin-right menu-star"></i>Important Files (1)<i class="fa fa-caret-down w3-margin-left"></i></a>
   <div id="Demo2" class="w3-hide w3-animate-left">
     </a>
-     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="doShare('File2');w3_close();">
+     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-blue" onclick="doShare('File2');w3_close();">
       <div class="w3-container">
-        <img class="w3-round w3-margin-right" src="./fileIcon5.png" style="width:15%;"><span class="w3-opacity w3-large">File 2</span>
+        <img class="w3-round w3-margin-right" src="./doc_icon.png" style="width:15%;"><span class="w3-opacity w3-large">File 2</span>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
       </div>
     </a>
   </div>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-trash w3-margin-right"></i>Trash</a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-hourglass-end w3-margin-right"></i>Draft Files</a>
-
-
+  <a href="#" class="w3-bar-item w3-round w3-button"><i class="fa fa-trash w3-margin-right"></i>Trash</a>
+  <a href="#" class="w3-bar-item w3-round w3-button"><i class="fa fa-hourglass-end w3-margin-right"></i>Draft Files</a>
   
 </nav>
 
 <!-- Modal that pops up when you click on "Share File" -->
 <div id="id01" class="w3-modal" style="z-index:4">
   <div class="w3-modal-content w3-animate-zoom">
-    <div class="w3-container w3-padding w3-red">
+    <div class="w3-container w3-padding w3-blue">
        <span onclick="document.getElementById('id01').style.display='none'"
-       class="w3-button w3-red w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
+       class="w3-button w3-blue w3-round w3-hover-red w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
       <h2 style = 'text-align:center'>Share File</h2>
     </div>
     <div class="w3-panel">
@@ -112,12 +118,12 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Your Email">
       <label>File</label>
       <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Browse...">
-      <label>Tags: &nbsp <a id = 'tag0' onclick = "this.innerHTML = '&#10004; Draft'" class="w3-button tags w3-red" >Draft</a>&nbsp&nbsp<a id = 'tag1' onclick = "this.innerHTML = '&#10004; Master'" class="w3-button tags w3-red" >Master</a>&nbsp&nbsp<a id = 'tag2' onclick = "this.innerHTML = '&#10004; Notes'" class="w3-button tags w3-red" >Notes</a>&nbsp&nbsp<a class="w3-button tags w3-red" >Custom</a>&nbsp&nbsp</label>
+      <label>Tags: &nbsp <a onclick = "this.innerHTML = '&#10004; Draft'" class="w3-button tags w3-blue" >Draft</a>&nbsp&nbsp<a onclick = "this.innerHTML = '&#10004; Master'" class="w3-button tags w3-blue" >Master</a>&nbsp&nbsp<a onclick = "this.innerHTML = '&#10004; Notes'" class="w3-button tags w3-blue" >Notes</a>&nbsp&nbsp<a class="w3-button tags w3-blue" >Custom</a>&nbsp&nbsp</label>
       
       <input class="w3-input w3-border w3-margin-bottom w3-margin-top" style="height:100px" placeholder="Message">
       <div class="w3-section">
-        <a class="w3-button w3-red" onclick="document.getElementById('id01').style.display='none', document.getElementById('id05').style.display='block'">Cancel  <i class="fa fa-remove"></i></a>
-		<a class="w3-button w3-light-grey w3-right" onclick="document.getElementById('id01').style.display='none', document.getElementById('id04').style.display='block', removeTags()">Share  <i class="fa fa-paper-plane"></i></a> 
+        <a class="w3-button w3-blue w3-round w3-hover-red" onclick="document.getElementById('id01').style.display='none', document.getElementById('id05').style.display='block'">Cancel  <i class="fa fa-remove"></i></a>
+		<a class="w3-button w3-green w3-right w3-round" onclick="document.getElementById('id01').style.display='none', document.getElementById('id04').style.display='block'">Share  <i class="fa fa-paper-plane"></i></a> 
       </div>    
     </div>
   </div>
@@ -126,9 +132,9 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 <!-- Modal for shared users -->
 <div id="id02" class="w3-modal" style="z-index:4">
   <div class="w3-modal-content w3-animate-zoom">
-    <div class="w3-container w3-padding w3-red">
+    <div class="w3-container w3-padding w3-blue">
        <span onclick="document.getElementById('id02').style.display='none'"
-       class="w3-button w3-red w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
+       class="w3-button w3-blue w3-right w3-xxlarge w3-round w3-hover-red"><i class="fa fa-remove"></i></span>
        <h2 style="text-align:center">Shared with</h2>
     </div>
     <table style="width:100%">
@@ -170,9 +176,9 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 <!-- Modal for edit history -->
 <div id="id03" class="w3-modal" style="z-index:4">
   <div class="w3-modal-content w3-animate-zoom">
-    <div class="w3-container w3-padding w3-red">
+    <div class="w3-container w3-padding w3-blue">
        <span onclick="document.getElementById('id03').style.display='none'"
-       class="w3-button w3-red w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
+       class="w3-button w3-blue w3-right w3-xxlarge w3-round w3-hover-red"><i class="fa fa-remove"></i></span>
       <h2 style="text-align:center">Edit History</h2>
     </div>
     <table style="width:100%">
@@ -209,9 +215,9 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 <!-- Success modal -->
 <div id="id04" class="w3-modal" style="z-index:5">
   <div class="w3-modal-content w3-animate-zoom">
-    <div class="w3-container w3-padding w3-red">
+    <div class="w3-container w3-padding w3-blue">
 	   <span onclick="document.getElementById('id04').style.display='none'"
-       class="w3-button w3-red w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
+       class="w3-button w3-round w3-blue w3-right w3-xxlarge w3-hover-red"><i class="fa fa-remove"></i></span>
 		<h2 style=text-align:center> File shared successfully! </h2>
 	</div>
   </div>
@@ -220,18 +226,18 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 <!-- Unshared file modals - hardcoded for usage testing -->
 <div id="id06" class="w3-modal" style="z-index:5">
   <div class="w3-modal-content w3-animate-zoom">
-    <div class="w3-container w3-padding w3-red">
+    <div class="w3-container w3-padding w3-blue">
 	   <span onclick="document.getElementById('id06').style.display='none'"
-       class="w3-button w3-red w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
+       class="w3-button w3-round w3-blue w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
 		<h2 style=text-align:center> File not yet shared </h2>
 	</div>
   </div>
  </div>
 <div id="id07" class="w3-modal" style="z-index:4">
   <div class="w3-modal-content w3-animate-zoom">
-    <div class="w3-container w3-padding w3-red">
+    <div class="w3-container w3-padding w3-blue">
        <span onclick="document.getElementById('id07').style.display='none'"
-       class="w3-button w3-red w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
+       class="w3-button w3-blue w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
       <h2 style="text-align:center">Edit History</h2>
     </div>
     <table style="width:100%">
@@ -258,12 +264,12 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 <!-- Cancel modal -->
 <div id="id05" class="w3-modal" style="z-index:5">
   <div class="w3-modal-content w3-animate-zoom">
-    <div class="w3-container w3-padding w3-red">
+    <div class="w3-container w3-padding w3-blue">
 	   <span onclick="document.getElementById('id05').style.display='none'"
-       class="w3-button w3-red w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
+       class="w3-button w3-round w3-blue w3-right w3-xxlarge w3-hover-red"><i class="fa fa-remove"></i></span>
 		<h2 style=text-align:left> Are you sure you want to cancel? </h2>
-		<a class="w3-button w3-red" onclick="document.getElementById('id01').style.display='none', document.getElementById('id05').style.display='none', removeTags()">Yes</a>
-		<a href="javascript:void(0)" class="w3-bar-item w3-button w3-red w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id05').style.display='none', document.getElementById('id01').style.display='block'">No</a>
+		<a class="w3-round w3-button w3-white w3-hover-green" onclick="document.getElementById('id01').style.display='none', document.getElementById('id05').style.display='none'">Yes</a>
+		<a href="javascript:void(0)" class="w3-bar-item w3-button w3-round w3-white w3-button w3-hover-red w3-left-align" onclick="document.getElementById('id05').style.display='none', document.getElementById('id01').style.display='block'">No</a>
 	</div>
   </div>
  </div>
@@ -274,19 +280,22 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 <!-- Page content -->
 <div class="w3-main" style="margin-left:320px;">
 <i class="fa fa-bars w3-button w3-white w3-hide-large w3-xlarge w3-margin-left w3-margin-top" onclick="w3_open()"></i>
-<a href="javascript:void(0)" class="w3-hide-large w3-red w3-button w3-right w3-margin-top w3-margin-right" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-pencil"></i></a>
+<a href="javascript:void(0)" class="w3-hide-large w3-blue w3-button w3-right w3-margin-top w3-margin-right" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-pencil"></i></a>
 
 
 
 <!-- For the modal to work, look at line 150 and see how this code is in the first tag:
 onclick="document.getElementById('id02').style.display='block'". You see it says id02, scroll up to the Modal for shared users and you'll see the id=id02 in line 84. So code in line 150 is saying on a user's click, show the element with the id02 and this happens to be the modal for shared users.-->
 <div id="File1" class="w3-container file">
+  <div class="w3-bar w3-white">
+  <div class="w3-bar-item w3-button w3-round w3-hover-blue"><strong>File 1 >></strong></div>
+  <div class="w3-bar-item w3-button w3-round w3-hover-blue" style="float:right"><strong>Logout</strong></div>
+  </div>
   <br>
-  <img class="w3-round  w3-animate-top" src="./fileIcon3.png" style="width:20%;">
-  <h5 class="w3-opacity">File 1</h5>
+  <img class="w3-round  w3-animate-top" src="./doc_icon.png" style="width:20%;">
   <h4><i class="fa fa-clock-o"></i> File 1, Sep 27, 2015. <i onclick="myFav(this)" class="w3-margin-left fa fa-star-o" style="font-size:36px"></i></h4>
-  <a class="w3-button w3-light-grey" onclick="document.getElementById('id02').style.display='block'">Shared With<i class="w3-margin-left fa fa-mail-reply"></i></a>
-  <a class="w3-button w3-light-grey" href="#" onclick="document.getElementById('id03').style.display='block'">Edit History<i class="w3-margin-left fa fa-arrow-right"></i></a>
+  <a class="w3-button w3-round w3-light-grey" onclick="document.getElementById('id02').style.display='block'">Shared With<i class="w3-margin-left fa fa-mail-reply"></i></a>
+  <a class="w3-button w3-round w3-light-grey" href="#" onclick="document.getElementById('id03').style.display='block'">Edit History<i class="w3-margin-left fa fa-pencil"></i></a>
   
   <hr>
   
@@ -295,13 +304,16 @@ onclick="document.getElementById('id02').style.display='block'". You see it says
 </div>
 
 <div id="File2" class="w3-container file">
+  <div class="w3-bar w3-white">
+  <div class="w3-bar-item w3-round w3-hover-blue"><strong>File 2 >></strong></div>
+  <div class="w3-bar-item w3-round w3-hover-blue" style="float:right"><strong>Logout</strong></div>
+  </div>
   <br>
-  <img class="w3-round w3-animate-top" src="./fileIcon5.png" style="width:20%;">
-  <h5 class="w3-opacity">File 2</h5>
+  <img class="w3-round w3-animate-top" src="./doc_icon.png" style="width:20%;">
 
   <h4><i class="fa fa-clock-o"></i> File 2, Sep 25, 2015.  <i id="fav-file" class="w3-margin-left fa fa-star" style="font-size:36px"></i> </h4>
-  <a class="w3-button w3-light-grey" onclick="document.getElementById('id02').style.display='block'">Shared With<i class="w3-margin-left fa fa-mail-reply"></i></a>
-  <a class="w3-button w3-light-grey" onclick="document.getElementById('id03').style.display='block'">Edit History<i class="w3-margin-left fa fa-arrow-right"></i></a>
+  <a class="w3-button w3-round w3-light-grey" onclick="document.getElementById('id02').style.display='block'">Shared With<i class="w3-margin-left fa fa-mail-reply"></i></a>
+  <a class="w3-button w3-round w3-light-grey" onclick="document.getElementById('id03').style.display='block'">Edit History<i class="w3-margin-left fa fa-pencil"></i></a>
   
   <hr>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -309,13 +321,16 @@ onclick="document.getElementById('id02').style.display='block'". You see it says
 </div>
 
 <div id="File3" class="w3-container file">
+    <div class="w3-bar w3-white">
+  <div class="w3-bar-item w3-round w3-hover-blue"><strong>File 3 >></strong></div>
+  <div class="w3-bar-item w3-round w3-hover-blue" style="float:right"><strong>Logout</strong></div>
+  </div>
   <br>
-  <img class="w3-round w3-animate-top" src="./fileIcon2.png" style="width:20%;">
-  <h5 class="w3-opacity">File 3</h5>
+  <img class="w3-round w3-animate-top" src="./pdf_icon.png" style="width:20%;">
   <h4><i class="fa fa-clock-o"></i> File 3, Sep 23, 2015. <i onclick="myFav(this)" class="w3-margin-left fa fa-star-o" style="font-size:36px"></i>
     </h4>
-  <a class="w3-button w3-light-grey" onclick="document.getElementById('id06').style.display='block'">Shared With<i class="w3-margin-left fa fa-mail-reply"></i></a>
-  <a class="w3-button w3-light-grey" onclick="document.getElementById('id07').style.display='block'">Edit History<i class="w3-margin-left fa fa-arrow-right"></i></a>
+  <a class="w3-button w3-round w3-light-grey" onclick="document.getElementById('id06').style.display='block'">Shared With<i class="w3-margin-left fa fa-mail-reply"></i></a>
+  <a class="w3-button w3-round w3-light-grey" onclick="document.getElementById('id07').style.display='block'">Edit History<i class="w3-margin-left fa fa-pencil"></i></a>
   <hr>
  
 </div>
@@ -340,11 +355,11 @@ function myFunc(id) {
   var x = document.getElementById(id);
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show"; 
-    x.previousElementSibling.className += " w3-red";
+    x.previousElementSibling.className += " w3-blue";
   } else { 
     x.className = x.className.replace(" w3-show", "");
     x.previousElementSibling.className = 
-    x.previousElementSibling.className.replace(" w3-red", "");
+    x.previousElementSibling.className.replace(" w3-blue", "");
   }
 }
 
@@ -388,15 +403,6 @@ function sentClose(){
   
 </script>
 
-<!-- Function for removing tags on close share window -->
-<script>
-function removeTags(){
-	document.getElementById('tag0').innerHTML = 'Draft'
-	document.getElementById('tag1').innerHTML = 'Master'
-	document.getElementById('tag2').innerHTML = 'Notes'
-}
-</script>
-
 <!--Favourite function-->
 <script>
 
@@ -421,4 +427,4 @@ function removeTags(){
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
 </body>
-</html> 
+</html>
