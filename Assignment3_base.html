@@ -36,11 +36,13 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   transition: 20s;  
   color: black;
 }
-.menu-star{
-  color:black
+
+.tags {
+  border-radius: 2.5px;
+  padding: 2px;
+  width: 100px;
+  height:25px;
 }
-
-
 </style>
 <body>
 
@@ -104,26 +106,18 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
     </div>
     <div class="w3-panel">
       <label>Send to</label>
-      <select name="groups" id="groups">
-        <option value="COMPSCI 101">COMPSCI 101</option>
-        <option value="COMPSCI 111">COMPSCI 111</option>
-        <option value="COMPSCI 105">COMPSCI 105</option>
-        <option value="COMPSCI 108">COMPSCI 108</option>
-      </select>
-      <style>
-      #groups {
-        width:150px; 
-      }
-      </style>
+      
       <input class="w3-input w3-border w3-margin-bottom" type="text">
       <label>From</label>
       <input class="w3-input w3-border w3-margin-bottom" type="text">
       <label>File</label>
       <input class="w3-input w3-border w3-margin-bottom" type="text">
-      <input class="w3-input w3-border w3-margin-bottom" style="height:150px" placeholder="Message">
+      <label>Tags: &nbsp <a class="w3-button tags w3-red" >Draft</a> &nbsp <a class="w3-button tags w3-red" >Master</a> <a class="w3-button tags w3-red" >Notes</a> &nbsp<a class="w3-button tags w3-red" >Custom</a> &nbsp</label>
+      
+      <input class="w3-input w3-border w3-margin-bottom w3-margin-top" style="height:100px" placeholder="Message">
       <div class="w3-section">
         <a class="w3-button w3-red" onclick="document.getElementById('id01').style.display='none'">Cancel  <i class="fa fa-remove"></i></a>
-        <a class="w3-button w3-light-grey w3-right" onclick="document.getElementById('id01').style.display='none'">Share  <i class="fa fa-paper-plane"></i></a> 
+        <a id= alert-share class="w3-button w3-light-grey w3-right" type ="button" value ="clicked" onclick=closeShareModal()> Share <i class="fa fa-paper-plane"></i></a> 
       </div>    
     </div>
   </div>
@@ -315,8 +309,28 @@ var openTab = document.getElementById("firstTab");
 openTab.click();
 </script>
 
+<script>
+function closeShareModal() {
+  modalClose()
+  
+  sentClose()
+}
+function modalClose() {
+  document.getElementById('id01').style.display='none';
+} 
+
+function sentClose(){
+  alert('File shared!')
+}
+
+
+  
+</script>
+
 <!--Favourite function UNFINISHED-->
 <script>
+
+  
   function myFav(x) {
     x.classList.toggle('fa-star');
     x.classList.toggle('fa-star-o');
@@ -327,15 +341,9 @@ openTab.click();
 
 
 
-<!--Pop-up function-->
-<script>
+
   
-  // When the user clicks on <div>, open the popup
-  function myPopup() {
-    var popup = document.getElementById("myPopup");
-    popup.classList.toggle("show");
-  }
-  </script>
+ 
 
   
 
